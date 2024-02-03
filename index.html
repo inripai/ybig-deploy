@@ -11,17 +11,11 @@
     />
   </head>
   <body>
-    <header>
-      <div class="welcome-bar" style="background-color: #000000">
-        <h1 style="display: inline-block;">Bem-vindo Felipe</h1>
-        <h5 style="display: inline-block; margin-left: 10px;">V1.0 InriPai(melhor chou da live)</h5>
-      </div>
-    </header>
     <div id="charactersTable" class="characters-table">
       <button id="loadDefaultsButton" onclick="loadDefaultCharacters()">
         Carregar Padrões
       </button>
-      <button id="updateButton" onclick="updateExistingCharacters()">
+      <button id="updateButton" onclick="refreshTable()">
         <i class="fas fa-sync-alt"></i>
       </button>
       <!-- Tabela para adicionar personagens -->
