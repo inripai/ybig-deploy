@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta de Dados</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="welcome-bar" style="background-color: #000000">
+        <h1>Bem-vindo Felipe</h1>
+      </div>
+    </header>
+    <div id="charactersTable" class="characters-table">
+      <button id="loadDefaultsButton" onclick="loadDefaultCharacters()">
+        Carregar Padrões
+      </button>
+      <button id="updateButton" onclick="updateExistingCharacters()">
+        <i class="fas fa-sync-alt"></i>
+      </button>
+      <!-- Tabela para adicionar personagens -->
+      <table border="1">
+        <thead>
+          <tr>
+            <th>NOME</th>
+            <th>LEVEL</th>
+            <th>MUNDO</th>
+            <th>PINTAR</th>
+            <th>EXCLUIR</th>
+            <!-- Nova coluna para o botão -->
+          </tr>
+        </thead>
+        <tbody id="charactersTableBody"></tbody>
+      </table>
+    </div>
+    <div class="container">
+      <div class="search-section">
+        <label for="characterName">Digite o nome do personagem:</label>
+        <input
+          type="text"
+          id="characterName"
+          placeholder="Nome do personagem"
+        />
+        <button onclick="searchCharacter()">Buscar</button>
+        <button id="addAllResultsButton" onclick="addAllToTable()">
+          Adicionar Todos os Resultados
+        </button>
+      </div>
+      <div id="charactersSection" class="characters-section"></div>
+      <div id="errorMessages" class="error-messages"></div>
+    </div>
+    <div id="loading" class="loading"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
