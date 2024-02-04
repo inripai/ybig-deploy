@@ -9,9 +9,29 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <div>
+      <button
+        style="margin-left: 1300px; margin-top: 30px"
+        onclick="showPopup()"
+      >
+        O que há de novo?
+      </button>
+    </div>
+    <div class="popup" id="popup">
+      <h2>Novidades</h2>
+      <p>Descrição das mudanças na versão 1.2:</p>
+      <ul>
+        <li>Corrigido bug de att geral</li>
+        <li>Melhorado o HTML para nao engolir conteudo</li>
+        <li>Adicionado esse botão</li>
+        <li>Estrutura do codigo alterada para maior performance</li>
+        <!-- Adicione mais itens conforme necessário -->
+      </ul>
+      <button onclick="hidePopup()">Fechar</button>
+    </div>
   </head>
   <body>
-    <div class="watermark">Versão 1.1 - Inri_Pai (te amo big)</div>
+    <div class="watermark">Versão 1.2 - Inri_Pai (te amo big)</div>
     <div id="charactersTable" class="characters-table">
       <button id="loadDefaultsButton" onclick="loadDefaultCharacters()">
         Carregar Padrões

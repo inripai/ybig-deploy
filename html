@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site com Conteúdo Expansível</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .navbar {
+        background-color: #333;
+        padding: 15px;
+        color: white;
+        text-align: center;
+      }
+
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Minha Barra de Navegação</h1>
+    </div>
+
+    <div class="content">
+      <div class="watermark">Versão 1.1 - Inri_Pai (te amo big)</div>
+      <div id="charactersTable" class="characters-table">
+        <button id="loadDefaultsButton" onclick="loadDefaultCharacters()">
+          Carregar Padrões
+        </button>
+        <button id="updateButton" onclick="refreshTable()">
+          <i class="fas fa-sync-alt"></i>
+        </button>
+        <!-- Tabela para adicionar personagens -->
+        <table border="1">
+          <thead>
+            <tr>
+              <th>NOME</th>
+              <th>LEVEL</th>
+              <th>MUNDO</th>
+              <th>PINTAR</th>
+              <th>EXCLUIR</th>
+              <!-- Nova coluna para o botão -->
+            </tr>
+          </thead>
+          <tbody id="charactersTableBody"></tbody>
+        </table>
+      </div>
+      <div class="container">
+        <div class="search-section">
+          <label for="characterName">Digite o nome do personagem:</label>
+          <input
+            type="text"
+            id="characterName"
+            placeholder="Nome do personagem"
+          />
+          <button onclick="searchCharacter()">Buscar</button>
+          <button id="addAllResultsButton" onclick="addAllToTable()">
+            Adicionar Todos os Resultados
+          </button>
+        </div>
+        <div id="charactersSection" class="characters-section"></div>
+        <div id="errorMessages" class="error-messages"></div>
+      </div>
+      <div id="loading" class="loading"></div>
+      <script src="script.js"></script>
+      <!-- Adicione mais conteúdo aqui -->
+    </div>
+  </body>
+</html>
